@@ -2,11 +2,15 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 class BasePage:
-    def __init__(self, driver):
-        self.driver = driver
+    def __init__(self):
+        options = webdriver.ChromeOptions()
+        options.add_argument('ignore-certificate-errors')
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)
 
     def __element(self, selectors: dict):
         for search_type in selectors.keys():
@@ -30,3 +34,7 @@ class BasePage:
 
     def select(self, selector, value):
         Select(self.__element(selector)).select_by_visible_text(value)
+
+    def to_page(self, url):
+        self.driver.get(url)
+

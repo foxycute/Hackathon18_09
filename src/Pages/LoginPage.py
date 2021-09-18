@@ -16,3 +16,4 @@ class Login(BasePage):
         self.click(LoginPage.CreateCustomer.terms_checkbox)
         self.click(LoginPage.CreateCustomer.register_button)
 
+
