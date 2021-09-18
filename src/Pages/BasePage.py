@@ -1,6 +1,7 @@
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 
 class BasePage:
@@ -27,4 +28,5 @@ class BasePage:
         element.clear()
         element.send_keys(value)
 
-
+    def select(self, selector, value):
+        Select(self.__element(selector)).select_by_visible_text(value)
