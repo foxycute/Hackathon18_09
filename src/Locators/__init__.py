@@ -1,0 +1,1 @@
+from .YandexMainPage import Example
