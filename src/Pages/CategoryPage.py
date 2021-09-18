@@ -8,18 +8,32 @@ class Category(BasePage):
         self.input(CategoryPage.CategoryPage.shop_input, 'London School')
         self.click(CategoryPage.CategoryPage.shop_button)
         self.click(CategoryPage.CategoryPage.shop_checkbox)
+
+    def price_checkbox(self):
         # by price
         self.click(CategoryPage.CategoryPage.price_checkbox)
+
+    def shop_by_colour(self):
         # shop_by_colour
         self.click(CategoryPage.CategoryPage.shop_by_colour)
+
+    def shop_by_size(self):
         # shop_by_size
         self.click(CategoryPage.CategoryPage.shop_by_size)
+
+    def shop_by_gender(self):
         # shop_by_gender
         self.click(CategoryPage.CategoryPage.shop_by_gender)
+
+    def shop_by_collection(self):
         # shop_by_collection
         self.click(CategoryPage.CategoryPage.shop_by_collection)
+
+    def shop_by_category(self):
         # shop_by_category
         self.click(CategoryPage.CategoryPage.shop_by_category)
+        
+    def shop_by_brand(self):
         # shop_by_brand
         self.click(CategoryPage.CategoryPage.shop_by_brand)
 
