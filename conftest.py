@@ -1,5 +1,7 @@
 import pytest
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 
 
 def pytest_addoption(parser):
@@ -11,7 +13,7 @@ def pytest_addoption(parser):
     parser.addoption(
         '--url',
         action='store',
-        default="https://yandex.ru",
+        default="https://apparel-uk.local:9002/ucstorefront/en/login",
         help="Choose url")
 
 
@@ -21,11 +23,9 @@ def browser(request):
     browser = request.config.getoption("--browser")
     url = request.config.getoption("--url")
     if browser == "chrome":
-        driver = webdriver.Chrome()
+        driver = webdriver.Chrome(ChromeDriverManager().install())
     elif browser == "firefox":
-        driver = webdriver.Firefox()
-    elif browser == "safari":
-        driver = webdriver.Safari()
+        driver = webdriver.Firefox(GeckoDriverManager().install())
     else:
         raise Exception(f"{request.param} is not supported!")
     driver.implicitly_wait(10)
