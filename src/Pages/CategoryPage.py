@@ -7,41 +7,53 @@ class Category(BasePage):
         # by store
         self.input(CategoryPage.CategoryPage.shop_input, 'London School')
         self.click(CategoryPage.CategoryPage.shop_button)
+
+    def check_shop_by_list(self):
         self.click(CategoryPage.CategoryPage.shop_checkbox)
 
-    def price_checkbox(self):
-        # by price
-        self.click(CategoryPage.CategoryPage.price_checkbox)
+    def shop_by_price_checkbox(self, price: str):
+        # this method filter items by price
+        bonds = {
+            '0': CategoryPage.CategoryPage.price_checkbox_0,
+            '20': CategoryPage.CategoryPage.price_checkbox_20,
+            '50': CategoryPage.CategoryPage.price_checkbox_50,
+            '100': CategoryPage.CategoryPage.price_checkbox_100,
+            '200': CategoryPage.CategoryPage.price_checkbox_200,
+            '300': CategoryPage.CategoryPage.price_checkbox_300,
+            '400': CategoryPage.CategoryPage.price_checkbox_400,
+            '500': CategoryPage.CategoryPage.price_checkbox_500,
+            '600': CategoryPage.CategoryPage.price_checkbox_600,
+            '700': CategoryPage.CategoryPage.price_checkbox_700
+        }
+        self.click(bonds[price])
 
     def shop_by_colour(self):
-        # shop_by_colour
+        # this method filter items by colour
         self.click(CategoryPage.CategoryPage.shop_by_colour)
 
     def shop_by_size(self):
-        # shop_by_size
+        # this method filter items by size
         self.click(CategoryPage.CategoryPage.shop_by_size)
 
     def shop_by_gender(self):
-        # shop_by_gender
+        # this method filter items by gender
         self.click(CategoryPage.CategoryPage.shop_by_gender)
 
     def shop_by_collection(self):
-        # shop_by_collection
+        # this method filter items by collection
         self.click(CategoryPage.CategoryPage.shop_by_collection)
 
     def shop_by_category(self):
-        # shop_by_category
+        # this method filter items by category
         self.click(CategoryPage.CategoryPage.shop_by_category)
 
     def shop_by_brand(self):
-        # shop_by_brand
+        # this method filter items by brand
         self.click(CategoryPage.CategoryPage.shop_by_brand)
 
-    def sort_by(self):
-        # sort_by_relevance
-        self.click(CategoryPage.CategoryPage.sort_by_relevance)
-        # sort_by_name
-        self.click(CategoryPage.CategoryPage.sort_by_name)
+    def sort_by_selector(self, text: str):
+        # this method sort items in shop list
+        self.select(selector=CategoryPage.CategoryPage.sort_by_selector, value=text)
 
     def item(self):
         # pagination top
