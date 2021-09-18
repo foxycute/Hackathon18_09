@@ -32,7 +32,7 @@ class Category(BasePage):
     def shop_by_category(self):
         # shop_by_category
         self.click(CategoryPage.CategoryPage.shop_by_category)
-        
+
     def shop_by_brand(self):
         # shop_by_brand
         self.click(CategoryPage.CategoryPage.shop_by_brand)
