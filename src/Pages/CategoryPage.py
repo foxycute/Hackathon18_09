@@ -55,7 +55,7 @@ class Category(BasePage):
         # this method sort items in shop list
         self.select(selector=CategoryPage.CategoryPage.sort_by_selector, value=text)
 
-    def item(self):
+    def check_product_item(self):
         # pagination top
         self.click(CategoryPage.CategoryPage.pag_top)
         # pagination bottom
