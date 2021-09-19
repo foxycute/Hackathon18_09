@@ -2,4 +2,3 @@ selenium
 webdriver-manager
 faker
 behave
-pytest

@@ -3,19 +3,19 @@ from src.Locators import CategoryPage
 
 
 class Category(BasePage):
-    def shop_by(self, text: str):
+   def shop_by(self, text: str):
         # method search shop
         self.input(CategoryPage.CategoryPage.shop_input, value=text)
         self.click(CategoryPage.CategoryPage.search_button)
 
-    def find_stores_near_by_me(self):
+   def find_stores_near_by_me(self):
         # this method find stores near by me
         self.click(CategoryPage.CategoryPage.find_stores_button)
-
-    def check_shop_near_by_me(self):
+        
+   def check_shop_near_by_me(self):
         # this method check first store near by me
         self.click(CategoryPage.CategoryPage.shop_checkbox)
-
+        
     def shop_by_price_checkbox(self, price: str):
         # this method filter items by price
         bonds = {
