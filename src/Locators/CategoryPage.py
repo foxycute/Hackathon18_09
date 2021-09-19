@@ -1,16 +1,25 @@
 class CategoryPage:
     shop_input = {"XPATH": "//input[@id='user_location_query']"}
-    shop_button = {"ID": "findStoresNearMeAjax"}
-    shop_checkbox = {"XPATH": "(//span[@class='facet__list__text'])[1]"}
-    price_checkbox = {"XPATH": "(//input[@type='checkbox'])[52]"}
-    shop_by_colour = {"XPATH": "(//span[@class='facet__list__label'])[56]"}
-    shop_by_size = {"XPATH": "//div[5]//div[2]//ul[1]//li[3]"}
+    search_button = {"ID", "user_location_query_button"}
+    find_stores_button = {"ID": "findStoresNearMeAjax"}
+    shop_checkbox = {"XPATH": "(//span[@class='facet__list__label'])[1]"}
+    price_checkbox_0 = {"XPATH": "(//input[@type='checkbox'])[52]"}
+    price_checkbox_20 = {"XPATH": "(//input[@type='checkbox'])[53]"}
+    price_checkbox_50 = {"XPATH": "(//input[@type='checkbox'])[54]"}
+    price_checkbox_100 = {"XPATH": "(//input[@type='checkbox'])[55]"}
+    price_checkbox_200 = {"XPATH": "(//input[@type='checkbox'])[56]"}
+    price_checkbox_300 = {"XPATH": "(//input[@type='checkbox'])[57]"}
+    price_checkbox_400 = {"XPATH": "(//input[@type='checkbox'])[58]"}
+    price_checkbox_500 = {"XPATH": "(//input[@type='checkbox'])[59]"}
+    price_checkbox_600 = {"XPATH": "(//input[@type='checkbox'])[60]"}
+    price_checkbox_700 = {"XPATH": "(//input[@type='checkbox'])[61]"}
+    shop_by_colour = {"XPATH": "(//span[@class='facet__list__label'])[63]"}
+    shop_by_size = {"XPATH": "(//span[@class='facet__list__label'])[75]"}
     shop_by_gender = {"XPATH": "//a[normalize-space()='Male']"}
     shop_by_collection = {"XPATH": "//a[normalize-space()='Surf']"}
     shop_by_category = {"XPATH": "//a[normalize-space()='Clothes']"}
     shop_by_brand = {"XPATH": "//span[@class='facet__text']//a[contains(text(),'Billabong')]"}
-    sort_by_relevance = {"CSS_SELECTOR": "select[id='sortOptions1'] option[value='relevance']"}
-    sort_by_name = {"CSS_SELECTOR": "select[id='sortOptions1'] option[value='name-asc']"}
+    sort_by_selector = {"CSS_SELECTOR": "#sortOptions1"}
     pag_top = {"XPATH": "//div[@class='pagination-bar top']//a[contains(text(),'2')]"}
     pag_bottom = {"XPATH": "//div[@class='pagination-bar bottom']//a[contains(text(),'4')]"}
     pick_item = {"XPATH": "//a[@title='Plan B Youth Pant peach XL']"}
