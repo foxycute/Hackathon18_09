@@ -4,7 +4,7 @@ from src.Locators import CategoryPage
 
 class Category(BasePage):
     def shop_by(self):
-        # by store
+        # by store (dict)
         self.input(CategoryPage.CategoryPage.shop_input, 'London School')
         self.click(CategoryPage.CategoryPage.shop_button)
         self.click(CategoryPage.CategoryPage.shop_checkbox)
