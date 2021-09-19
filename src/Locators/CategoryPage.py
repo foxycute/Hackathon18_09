@@ -14,7 +14,7 @@ class CategoryPage:
     price_checkbox_600 = {"XPATH": "(//input[@type='checkbox'])[60]"}
     price_checkbox_700 = {"XPATH": "(//input[@type='checkbox'])[61]"}
     shop_by_colour = {"XPATH": "(//span[@class='facet__list__label'])[63]"}
-    shop_by_size = {"XPATH": "(//span[@class='facet__list__label'])[61]"}
+    shop_by_size = {"XPATH": "(//span[@class='facet__list__label'])[75]"}
     shop_by_gender = {"XPATH": "//a[normalize-space()='Male']"}
     shop_by_collection = {"XPATH": "//a[normalize-space()='Surf']"}
     shop_by_category = {"XPATH": "//a[normalize-space()='Clothes']"}
