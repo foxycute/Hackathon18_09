@@ -1,7 +1,8 @@
 class CategoryPage:
     shop_input = {"XPATH": "//input[@id='user_location_query']"}
-    shop_button = {"ID": "findStoresNearMeAjax"}
-    shop_checkbox = {"XPATH": "(//span[@class='facet__list__text'])[1]"}
+    search_button = {"ID", "user_location_query_button"}
+    find_stores_button = {"ID": "findStoresNearMeAjax"}
+    shop_checkbox = {"XPATH": "(//span[@class='facet__list__label'])[1]"}
     price_checkbox_0 = {"XPATH": "(//input[@type='checkbox'])[52]"}
     price_checkbox_20 = {"XPATH": "(//input[@type='checkbox'])[53]"}
     price_checkbox_50 = {"XPATH": "(//input[@type='checkbox'])[54]"}
@@ -12,8 +13,8 @@ class CategoryPage:
     price_checkbox_500 = {"XPATH": "(//input[@type='checkbox'])[59]"}
     price_checkbox_600 = {"XPATH": "(//input[@type='checkbox'])[60]"}
     price_checkbox_700 = {"XPATH": "(//input[@type='checkbox'])[61]"}
-    shop_by_colour = {"XPATH": "(//span[@class='facet__list__label'])[56]"}
-    shop_by_size = {"XPATH": "//div[5]//div[2]//ul[1]//li[3]"}
+    shop_by_colour = {"XPATH": "(//span[@class='facet__list__label'])[63]"}
+    shop_by_size = {"XPATH": "(//span[@class='facet__list__label'])[61]"}
     shop_by_gender = {"XPATH": "//a[normalize-space()='Male']"}
     shop_by_collection = {"XPATH": "//a[normalize-space()='Surf']"}
     shop_by_category = {"XPATH": "//a[normalize-space()='Clothes']"}

@@ -3,12 +3,17 @@ from src.Locators import CategoryPage
 
 
 class Category(BasePage):
-    def shop_by(self):
-        # by store
-        self.input(CategoryPage.CategoryPage.shop_input, 'London School')
-        self.click(CategoryPage.CategoryPage.shop_button)
+    def shop_by(self, text: str):
+        # method search shop
+        self.input(CategoryPage.CategoryPage.shop_input, value=text)
+        self.click(CategoryPage.CategoryPage.search_button)
 
-    def check_shop_by_list(self):
+    def find_stores_near_by_me(self):
+        # this method find stores near by me
+        self.click(CategoryPage.CategoryPage.find_stores_button)
+
+    def check_shop_near_by_me(self):
+        # this method check first store near by me
         self.click(CategoryPage.CategoryPage.shop_checkbox)
 
     def shop_by_price_checkbox(self, price: str):
@@ -28,27 +33,27 @@ class Category(BasePage):
         self.click(bonds[price])
 
     def shop_by_colour(self):
-        # this method filter items by colour
+        # this method check black colour items
         self.click(CategoryPage.CategoryPage.shop_by_colour)
 
     def shop_by_size(self):
-        # this method filter items by size
+        # this method check M size items
         self.click(CategoryPage.CategoryPage.shop_by_size)
 
     def shop_by_gender(self):
-        # this method filter items by gender
+        # this method check Male items
         self.click(CategoryPage.CategoryPage.shop_by_gender)
 
     def shop_by_collection(self):
-        # this method filter items by collection
+        # this method choose items by Surf collection
         self.click(CategoryPage.CategoryPage.shop_by_collection)
 
     def shop_by_category(self):
-        # this method filter items by category
+        # this method choose category 'Clothes'
         self.click(CategoryPage.CategoryPage.shop_by_category)
 
     def shop_by_brand(self):
-        # this method filter items by brand
+        # this method choose brand Billabong
         self.click(CategoryPage.CategoryPage.shop_by_brand)
 
     def sort_by_selector(self, text: str):
@@ -60,9 +65,9 @@ class Category(BasePage):
         self.click(CategoryPage.CategoryPage.pag_top)
         # pagination bottom
         self.click(CategoryPage.CategoryPage.pag_bottom)
-        # pick item
+        # pick first item
         self.click(CategoryPage.CategoryPage.pick_item)
-        # product_available button
+        # click product available button
         self.click(CategoryPage.CategoryPage.product_available)
         # add to cart button
         self.click(CategoryPage.CategoryPage.add_to_cart)
